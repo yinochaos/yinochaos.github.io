@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="本文介绍如何通过github和hexo来完成个人博客搭建">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用github+hexo的next主题搭建搭建个人博客">
+<meta property="og:url" content="http://yoursite.com/2019/05/03/github-hexo/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="本文介绍如何通过github和hexo来完成个人博客搭建">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2019/05/03/github-hexo/图片地址">
+<meta property="og:updated_time" content="2020-03-08T04:00:47.601Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="使用github+hexo的next主题搭建搭建个人博客">
+<meta name="twitter:description" content="本文介绍如何通过github和hexo来完成个人博客搭建">
+<meta name="twitter:image" content="http://yoursite.com/2019/05/03/github-hexo/图片地址">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/05/03/github-hexo/">
+
+
+
+
+
+  <title>使用github+hexo的next主题搭建搭建个人博客 | Hexo</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/03/github-hexo/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="yinochaos">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">使用github+hexo的next主题搭建搭建个人博客</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-03T19:17:00+08:00">
+                2019-05-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>本文介绍如何通过github和hexo来完成个人博客搭建</p>
+<a id="more"></a>
+<h1 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装所需软件和hexo</span></span><br><span class="line">sudo apt-get install nodejs npm </span><br><span class="line">sudo npm install -g hexo-cli</span><br><span class="line"><span class="comment"># 初始化hexo</span></span><br><span class="line">hexo_dir=&lt;你想安装的hexo目录&gt;</span><br><span class="line">hexo init <span class="variable">$hexo_dir</span> </span><br><span class="line"><span class="comment"># 生成静态文件&amp;启动服务</span></span><br><span class="line">hexo generate &amp;&amp; hexo server  <span class="comment"># 或者使用减缩版命令hexo s -g</span></span><br></pre></td></tr></table></figure>
+<p>这时候就可以用浏览器打开网址： <a href="https://link.jianshu.com?t=http%3A%2F%2Flocalhost%3A4000%2F" target="_blank" rel="noopener">http://localhost:4000/</a> 来进行预览了，这样Hexo 本地博客已经搭建好了，接下来我们需要将Hexo 部署到 <a href="https://link.jianshu.com?t=https%3A%2F%2Fgithub.com%2F" target="_blank" rel="noopener">github</a> 上。</p>
+<h1 id="配置github"><a href="#配置github" class="headerlink" title="配置github"></a>配置github</h1><h2 id="配置SSH"><a href="#配置SSH" class="headerlink" title="配置SSH"></a>配置SSH</h2><p>执行下面命令生成SSH</p>
+<pre><code>ssh-keygen
+</code></pre><p>三次回车之后，可以生成id_rsa.pub文件，这里面就是SSH key的内容，然后使用vim编辑器打开这个文件</p>
+<pre><code>vim ~/.ssh/id_rsa.pub
+</code></pre><p>之后把里面的内容都拷贝下来，打开github，点击右上角自己的头像，点击settings，再点击SSH，之后添加new ssh key，最后把复制的信息都粘贴进去，title随便写，最后输入以下命令判断SSH是否配置好：</p>
+<pre><code>ssh -T git@github.com
+</code></pre><p>如果出现</p>
+<pre><code>Hi! You&apos;ve successfully authenticated, but GitHub
+ does not provide shell access.
+</code></pre><p>就表示你已经配置好了SSH</p>
+<p>可以修改主题，下载其他主题，放到theme目录下面，并且修改配置文件的主题即可</p>
+<h2 id="部署到github"><a href="#部署到github" class="headerlink" title="部署到github"></a>部署到github</h2><p>安装git部署</p>
+<pre><code>npm install hexo-deployer-git --save
+</code></pre><p>修改配置文件的deploy</p>
+<pre><code>deploy:
+  type: git
+  repo: git@github.com:username/username.github.io.git
+  branch: master
+</code></pre><p>然后执行</p>
+<pre><code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d
+</code></pre><p>顺利的话在浏览器输入 username.github.io </p>
+<h1 id="写文章"><a href="#写文章" class="headerlink" title="写文章"></a>写文章</h1><p>Hexo默认新建的文章抬头已有title、date、tags等属性，可能缺乏categories和meta标签，想要指定目录就需要添加categories属性，而meta标签则是为了便于搜索引擎的收录。想要修改的话，可以打开D:\Hexo\scaffolds\post.md文件在里面添加。<br>title:  #文章标题<br>date:  #时间，一般不用改<br>categories:  #目录分类<br>tags:  #标签，格式可以是[Hexo,总结]，中间用英文逗号分开</p>
+<h2 id="keywords-文章关键词，多个关键词用英文逗号隔开"><a href="#keywords-文章关键词，多个关键词用英文逗号隔开" class="headerlink" title="keywords:  #文章关键词，多个关键词用英文逗号隔开"></a>keywords:  #文章关键词，多个关键词用英文逗号隔开</h2><h2 id="文章图片的存放"><a href="#文章图片的存放" class="headerlink" title="文章图片的存放"></a>文章图片的存放</h2><p>想要在文章中插入图片的话，可以按照Markdown语法来插入，格式为<img src="图片地址" alt="图片名称">。图片的存放有两种方式：在本地hexo\source\目录下新建一个存放图片的文件夹，比如images，然后把想要插入的图片放在里面，插入图片的路径；第二种方法是把图片上传到网络，然后插入图片路径。推荐使用第二种。<br>　　推荐两个比较好用的：</p>
+<p>图床；无需注册，方便快捷。</p>
+<p>七牛云存储；需要注册，免费，空间大，速度快。</p>
+<h2 id="编写文章摘要"><a href="#编写文章摘要" class="headerlink" title="编写文章摘要"></a>编写文章摘要</h2><p>在文章的属性列表中添加photos属性</p>
+<p>编写的文章属性中photos默认为文章的配图，这是我目前最喜欢的配图方式，但是有一个缺点，它不能自定义裁剪和缩略比，展示的是原图，这相当于如果你的每张配图大小比例不一致将会很影响美观性，目前没有很好的解决方案，所以只好自己裁剪好再引入。<br>如这篇文章：<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">Hexo</span> <span class="string">Next如何在文章摘要展示图片</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2018</span><span class="bullet">-07</span><span class="bullet">-18</span> <span class="number">17</span><span class="string">:43:44</span></span><br><span class="line"><span class="attr">tags:</span> <span class="string">Hexo</span></span><br><span class="line"><span class="attr">categories:</span> <span class="string">Hexo</span></span><br><span class="line"><span class="attr">photos:</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">"https://faithlove.github.io/pic/2018/HexoThumb/topPicPre.png"</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">Hexo</span> <span class="string">Next如何在文章摘要展示图片</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2018</span><span class="bullet">-07</span><span class="bullet">-18</span> <span class="number">17</span><span class="string">:43:44</span></span><br><span class="line"><span class="attr">tags:</span> <span class="string">Hexo</span></span><br><span class="line"><span class="attr">categories:</span> <span class="string">Hexo</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="string">&lt;img</span> <span class="string">src="https://faithlove.github.io/pic/2018/RMTP_1/topPicPre.png"</span> <span class="string">width=50%</span> <span class="string">/&gt;</span></span><br><span class="line"><span class="string">哇，漂亮的小姐姐(❤</span> <span class="string">ω</span> <span class="string">❤)</span></span><br><span class="line"><span class="string">&lt;!--more--&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="代码折叠"><a href="#代码折叠" class="headerlink" title="代码折叠"></a>代码折叠</h2><p>在main.js中添加折叠js</p>
+<p>next主题的主要js位于themes/next/source/js/src/post-details.js,<br>在里面找合适的位置，添加如下代码：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    $(<span class="built_in">document</span>).on(<span class="string">'click'</span>, <span class="string">'.fold_hider'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        $(<span class="string">'&gt;.fold'</span>, <span class="keyword">this</span>.parentNode).slideToggle();</span><br><span class="line">        $(<span class="string">'&gt;:first'</span>, <span class="keyword">this</span>).toggleClass(<span class="string">'open'</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="comment">//默认情况下折叠</span></span><br><span class="line">    $(<span class="string">"div.fold"</span>).css(<span class="string">"display"</span>,<span class="string">"none"</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>自定义内建标签</p>
+<p>在主题scripts下添加一个tags.js, 位于themes/next/scripts/tags.js</p>
+<figure class="highlight qml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">  @haohuawu</span></span><br><span class="line"><span class="comment">  修复 Nunjucks 的 tag 里写 ```代码块```，最终都会渲染成 undefined 的问题</span></span><br><span class="line"><span class="comment">  https://github.com/hexojs/hexo/issues/2400</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">const</span> rEscapeContent = <span class="regexp">/&lt;escape(?:[^&gt;]*)&gt;([\s\S]*?)&lt;\/escape&gt;/g</span>;</span><br><span class="line"><span class="keyword">const</span> placeholder = <span class="string">'\uFFFD'</span>;</span><br><span class="line"><span class="keyword">const</span> rPlaceholder = <span class="regexp">/(?:&lt;|&amp;lt;)\!--\uFFFD(\d+)--(?:&gt;|&amp;gt;)/g</span>;</span><br><span class="line"><span class="keyword">const</span> cache = [];</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">escapeContent</span>(<span class="params">str</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">'&lt;!--'</span> + placeholder + (cache.push(str) - <span class="number">1</span>) + <span class="string">'--&gt;'</span>;</span><br><span class="line">&#125;</span><br><span class="line">hexo.extend.filter.register(<span class="string">'before_post_render'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">  data.content = data.content.replace(rEscapeContent, <span class="function"><span class="keyword">function</span>(<span class="params">match, content</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> escapeContent(content);</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="keyword">return</span> data;</span><br><span class="line">&#125;);</span><br><span class="line">hexo.extend.filter.register(<span class="string">'after_post_render'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">  data.content = data.content.replace(rPlaceholder, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> cache[<span class="built_in">arguments</span>[<span class="number">1</span>]];</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="keyword">return</span> data;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">再继续添加一个fold.js</span><br><span class="line"></span><br><span class="line"><span class="comment">/* global hexo */</span></span><br><span class="line"><span class="comment">// Usage: &#123;% fold ???? %&#125; Something &#123;% endfold %&#125;</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fold</span> (<span class="params">args, content</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> text = args[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">if</span>(!text) text = <span class="string">"点击显/隐"</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">'&lt;div&gt;&lt;div class="fold_hider"&gt;&lt;div class="close hider_title"&gt;'</span> + text + <span class="string">'&lt;/div&gt;&lt;/div&gt;&lt;div class="fold"&gt;\n'</span> + hexo.render.renderSync(&#123;<span class="attribute">text</span>: content, <span class="attribute">engine</span>: <span class="string">'markdown'</span>&#125;) + <span class="string">'\n&lt;/div&gt;&lt;/div&gt;'</span>;</span><br><span class="line">&#125;</span><br><span class="line">hexo.extend.tag.register(<span class="string">'fold'</span>, fold, &#123;<span class="attribute">ends</span>: <span class="literal">true</span>&#125;);</span><br><span class="line"></span><br><span class="line">最后，添加几个自定义样式，位置themes/next/source/css/_custom/custom.styl</span><br><span class="line"></span><br><span class="line">.hider_title&#123;</span><br><span class="line">    <span class="built_in">font</span>-<span class="attribute">family</span>: <span class="string">"Microsoft Yahei"</span>;</span><br><span class="line">    <span class="attribute">cursor</span>: pointer;</span><br><span class="line">&#125;</span><br><span class="line">.close:<span class="title">after</span>&#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">"▼"</span>;</span><br><span class="line">&#125;</span><br><span class="line">.open:<span class="title">after</span>&#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">"▲"</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">最后，在我们需要折叠的地方前后添加便签，示例用法：</span><br><span class="line"></span><br><span class="line">&#123;% fold 点击显/隐内容 %&#125;</span><br><span class="line">something you want to fold, include code block.</span><br><span class="line">&#123;% endfold %&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/05/04/tensorflow-install-basic/" rel="prev" title="tensorflow 安装(1)————安装过程中可能遇到的各种问题">
+                tensorflow 安装(1)————安装过程中可能遇到的各种问题 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">yinochaos</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#安装hexo"><span class="nav-number">1.</span> <span class="nav-text">安装hexo</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置github"><span class="nav-number">2.</span> <span class="nav-text">配置github</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#配置SSH"><span class="nav-number">2.1.</span> <span class="nav-text">配置SSH</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#部署到github"><span class="nav-number">2.2.</span> <span class="nav-text">部署到github</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#写文章"><span class="nav-number">3.</span> <span class="nav-text">写文章</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#keywords-文章关键词，多个关键词用英文逗号隔开"><span class="nav-number">3.1.</span> <span class="nav-text">keywords:  #文章关键词，多个关键词用英文逗号隔开</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文章图片的存放"><span class="nav-number">3.2.</span> <span class="nav-text">文章图片的存放</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编写文章摘要"><span class="nav-number">3.3.</span> <span class="nav-text">编写文章摘要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码折叠"><span class="nav-number">3.4.</span> <span class="nav-text">代码折叠</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">yinochaos</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>

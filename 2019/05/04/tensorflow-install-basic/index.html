@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="zh-Hans">
+<html class="theme-next mist use-motion" lang="zh-Hans">
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="description" content="本文介绍如何通过源代码来编译tensorflow静态库">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2019/05/04/hello-world/index.html">
+<meta property="og:title" content="tensorflow 安装(1)————安装过程中可能遇到的各种问题">
+<meta property="og:url" content="http://yoursite.com/2019/05/04/tensorflow-install-basic/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="本文介绍如何通过源代码来编译tensorflow静态库">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-04T11:27:10.388Z">
+<meta property="og:updated_time" content="2020-03-08T04:00:58.990Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="tensorflow 安装(1)————安装过程中可能遇到的各种问题">
+<meta name="twitter:description" content="本文介绍如何通过源代码来编译tensorflow静态库">
 
 
 
@@ -97,7 +97,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Mist',
     version: '5.1.4',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/05/04/hello-world/">
+  <link rel="canonical" href="http://yoursite.com/2019/05/04/tensorflow-install-basic/">
 
 
 
 
 
-  <title>Hello World | Hexo</title>
+  <title>tensorflow 安装(1)————安装过程中可能遇到的各种问题 | Hexo</title>
   
 
 
@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/04/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/04/tensorflow-install-basic/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="yinochaos">
@@ -249,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World</h1>
+          <h1 class="post-title" itemprop="name headline">tensorflow 安装(1)————安装过程中可能遇到的各种问题</h1>
         
 
         <div class="post-meta">
@@ -261,7 +261,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-04T19:27:10+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-04T16:17:13+08:00">
                 2019-05-04
               </time>
             
@@ -299,15 +299,24 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <p>本文介绍如何通过源代码来编译tensorflow静态库<br><a id="more"></a></p>
+<h1 id="基本安装方式"><a href="#基本安装方式" class="headerlink" title="基本安装方式"></a>基本安装方式</h1><h2 id="pip安装"><a href="#pip安装" class="headerlink" title="pip安装"></a>pip安装</h2><p> Create a new virtual environment by choosing a Python interpreter and making a ./venv directory to hold it:</p>
+<p>virtualenv –system-site-packages -p python3 ./venv</p>
+<p>Activate the virtual environment using a shell-specific command:</p>
+<p>source ./venv/bin/activate  # sh, bash, ksh, or zsh</p>
+<p>When virtualenv is active, your shell prompt is prefixed with (venv).</p>
+<p>Install packages within a virtual environment without affecting the host system setup. Start by upgrading pip:</p>
+<p>pip install –upgrade pip</p>
+<p>pip list  # show packages installed within the virtual environment</p>
+<p>And to exit virtualenv later:</p>
+<p>deactivate  # don’t exit until you’re done using TensorFlow</p>
+<h2 id="docker安装"><a href="#docker安装" class="headerlink" title="docker安装"></a>docker安装</h2><p>@TODO</p>
+<h1 id="遇到的问题集"><a href="#遇到的问题集" class="headerlink" title="遇到的问题集"></a>遇到的问题集</h1><h2 id="环境中python的gcc版本太低"><a href="#环境中python的gcc版本太低" class="headerlink" title="环境中python的gcc版本太低"></a>环境中python的gcc版本太低</h2><p>这种情况在工业界开发环境由于需要保持稳定，更新不及时，经常会遇到这种情况；这样的话就需要从源代码安装Python来解决问题；<br>到官方网站下载Python包：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+<p>#参考</p>
+<ul>
+<li><a href="https://tensorflow.google.cn/install/pip?lang=python3" target="_blank" rel="noopener">TF官网pip安装教程</a></li>
+<li><a href="https://tensorflow.google.cn/install/docker" target="_blank" rel="noopener">TF官网docker安装教程</a></li>
+</ul>
 
       
     </div>
@@ -328,6 +337,26 @@
       
       
 
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/03/github-hexo/" rel="next" title="使用github+hexo的next主题搭建搭建个人博客">
+                <i class="fa fa-chevron-left"></i> 使用github+hexo的next主题搭建搭建个人博客
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/05/04/tensorflow-install-build/" rel="prev" title="tensorflow 安装(2)————静态库和动态库编译">
+                tensorflow 安装(2)————静态库和动态库编译 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
 
       
@@ -401,7 +430,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -438,7 +467,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#基本安装方式"><span class="nav-number">1.</span> <span class="nav-text">基本安装方式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#pip安装"><span class="nav-number">1.1.</span> <span class="nav-text">pip安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#docker安装"><span class="nav-number">1.2.</span> <span class="nav-text">docker安装</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#遇到的问题集"><span class="nav-number">2.</span> <span class="nav-text">遇到的问题集</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境中python的gcc版本太低"><span class="nav-number">2.1.</span> <span class="nav-text">环境中python的gcc版本太低</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -458,7 +487,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
@@ -476,7 +505,7 @@
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
 
 
 
@@ -638,6 +667,28 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
 
   
 
